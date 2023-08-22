@@ -37,12 +37,12 @@ elif (SPI_TYPE == 'SW'):
 
 # Check to see if we have input from command line. Bail if we dont.
 if ( len(sys.argv) <= 1):
-    print "Usage: MCP3008-example.py <Analog Port>"
+    print ("Usage: MCP3008-example.py <Analog Port>")
     sys.exit(1)
 else:
     analogPort = int(sys.argv[1])
 
-print 'Reading MCP3008 values on pin: %d' % analogPort
+print ('Reading MCP3008 values on pin: %d' % analogPort)
 
 try:
     while True:
@@ -50,7 +50,7 @@ try:
         val = mcp.read_adc(analogPort)
 
         # print out the value
-        print val
+        print (val,"V")
 
         # Sleep for dly
         sleep(dly)
